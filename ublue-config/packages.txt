@@ -1,0 +1,13 @@
+kde-plasma-desktop
+splashtop-streamer
+tailscale
+wine
+google-chrome-stable
+firefox
+brave-browser
+gimp
+vlc
+blender
+simple-scan
+gnome-disk-utility
+flameshot

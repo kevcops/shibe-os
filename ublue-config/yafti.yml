@@ -1,0 +1,35 @@
+---
+title: "Welcome to Shibe OS"
+subtitle: "Your Dental Office Portal"
+steps:
+  - name: welcome
+    type: message
+    title: "🐶 Welcome to Shibe OS!"
+    description: "Your Dental Office Portal"
+
+  - name: darkmode
+    type: toggle
+    title: "Enable Dark Mode?"
+    default: true
+
+  - name: officeid
+    type: text-entry
+    title: "CareStack Office ID"
+    variable: office_id
+    placeholder: "your-office-id"
+
+  - name: apps
+    type: multiselect
+    title: "Optional Applications"
+    options:
+      - name: Slack
+        value: com.slack.Slack
+      - name: Zoom
+        value: us.zoom.Zoom
+      - name: Bitwarden
+        value: com.bitwarden.desktop
+
+  - name: finish
+    type: script
+    title: "Finalizing Setup..."
+    script: /usr/share/ublue-os/setup-carestack.sh

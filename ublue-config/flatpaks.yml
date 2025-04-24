@@ -1,0 +1,10 @@
+flatpak:
+  apps:
+    - com.bitwarden.desktop
+    - org.libreoffice.LibreOffice
+    - com.github.xournalpp.xournalpp
+    - org.kde.krita
+    - us.zoom.Zoom
+    - com.slack.Slack
+    - org.mozilla.Thunderbird
+    - com.github.tchx84.Flatseal
