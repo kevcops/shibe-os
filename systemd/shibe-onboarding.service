@@ -1,0 +1,11 @@
+[Unit]
+Description=Shibe OS First Boot Onboarding
+ConditionPathExists=/etc/shibe-os-firstboot
+
+[Service]
+ExecStart=/etc/ublue-config/branding/shibe-onboarding.sh
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
