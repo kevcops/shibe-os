@@ -36,3 +36,8 @@ install -Dm644 /etc/ublue-config/branding/icons/carestack.png /usr/share/icons/h
 
 # Refresh icon cache
 gtk-update-icon-cache /usr/share/icons/hicolor || true
+
+# Install Wine and Bottles via Flatpak during onboarding
+flatpak install -y flathub org.winehq.Wine || true
+flatpak install -y flathub com.usebottles.bottles || true
+
