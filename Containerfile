@@ -13,7 +13,7 @@ RUN rpm-ostree install gimp --apply-live
 RUN rpm-ostree install blender --apply-live
 RUN rpm-ostree install thunderbird --apply-live
 RUN rpm-ostree install xournalpp --apply-live
-RUN rpm-ostree install google-chrome --apply-live
+RUN rpm-ostree install chromium --apply-live
 RUN rpm-ostree install firefox --apply-live
 RUN rpm-ostree install brave-browser --apply-live
 RUN rpm-ostree install bitwarden --apply-live
