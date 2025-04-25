@@ -15,7 +15,6 @@ RUN rpm-ostree install thunderbird --apply-live
 RUN rpm-ostree install xournalpp --apply-live
 RUN rpm-ostree install chromium --apply-live
 RUN rpm-ostree install firefox --apply-live
-RUN rpm-ostree install bitwarden --apply-live
 RUN rpm-ostree install gnome-boxes --apply-live
 RUN rpm-ostree install flameshot --apply-live
 
