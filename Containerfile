@@ -15,7 +15,6 @@ RUN rpm-ostree install thunderbird --apply-live
 RUN rpm-ostree install xournalpp --apply-live
 RUN rpm-ostree install chromium --apply-live
 RUN rpm-ostree install firefox --apply-live
-RUN rpm-ostree install brave-browser --apply-live
 RUN rpm-ostree install bitwarden --apply-live
 RUN rpm-ostree install gnome-boxes --apply-live
 RUN rpm-ostree install flameshot --apply-live
@@ -26,6 +25,7 @@ RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.
 # Install Flatpak apps individually for visibility
 RUN flatpak install -y flathub org.winehq.Wine
 RUN flatpak install -y flathub com.usebottles.bottles
+RUN flatpak install -y flathub com.brave.Browser
 
 # Copy onboarding and branding files
 COPY branding/ /etc/ublue-config/branding/
