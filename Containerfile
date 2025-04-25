@@ -9,12 +9,12 @@ RUN rpm-ostree install libreoffice --apply-live
 RUN rpm-ostree install simple-scan --apply-live
 RUN rpm-ostree install tailscale --apply-live
 RUN rpm-ostree install vlc --apply-live
-RUN rpm-ostree install gimp --apply-live
 RUN rpm-ostree install thunderbird --apply-live
 RUN rpm-ostree install chromium --apply-live
 RUN rpm-ostree install firefox --apply-live
 RUN rpm-ostree install gnome-boxes --apply-live
 RUN rpm-ostree install flameshot --apply-live
+RUN rpm-ostree install pinta --apply-live  
 
 # Add Flathub remote (no flatpak installs during build)
 RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
