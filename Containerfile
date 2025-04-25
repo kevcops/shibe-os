@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/aurora-kinoite:39
+FROM ghcr.io/ublue-os/bluefin:latest
 
 LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
