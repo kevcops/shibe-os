@@ -1,5 +1,5 @@
 # Use a bootable base from uBlue (Fedora Kinoite with ostree + kernel)
-FROM ghcr.io/ublue-os/kinoite:latest
+FROM ghcr.io/ublue-os/bluefin-kinoite:latest
 
 LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
