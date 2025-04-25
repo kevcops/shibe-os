@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM ghcr.io/ublue-os/ublue-kinoite:latest
 
 LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
