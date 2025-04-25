@@ -23,8 +23,8 @@ RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.
 
 # Install Flatpak apps individually for visibility
 # Install Wine and Bottles using Flatpak at first boot
-flatpak install -y flathub org.winehq.Wine || true
-flatpak install -y flathub com.usebottles.bottles || true
+RUN flatpak install -y flathub org.winehq.Wine
+RUN flatpak install -y flathub com.usebottles.bottles
 
 # Copy onboarding and branding files
 COPY branding/ /etc/ublue-config/branding/
