@@ -4,23 +4,32 @@ LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
 LABEL ostree.bootable="true"
 
+# Install RPMs that work with the Silverblue base
+RUN rpm-ostree install \
+    libreoffice \
+    simple-scan \
+    tailscale \
+    vlc \
+    gimp \
+    blender \
+    thunderbird \
+    xournalpp \
+    google-chrome \
+    firefox \
+    brave-browser \
+    bitwarden \
+    gnome-boxes \
+    flameshot \
+    --apply-live
 
-RUN rpm-ostree install libreoffice --apply-live
-RUN rpm-ostree install simple-scan --apply-live
-RUN rpm-ostree install wine --apply-live
-RUN rpm-ostree install tailscale --apply-live
-RUN rpm-ostree install vlc --apply-live
-RUN rpm-ostree install gimp --apply-live
-RUN rpm-ostree install blender --apply-live
-RUN rpm-ostree install thunderbird --apply-live
-RUN rpm-ostree install xournalpp --apply-live
-RUN rpm-ostree install google-chrome --apply-live
-RUN rpm-ostree install firefox --apply-live
-RUN rpm-ostree install brave-browser --apply-live
-RUN rpm-ostree install bitwarden --apply-live
-RUN rpm-ostree install gnome-boxes --apply-live
-RUN rpm-ostree install flameshot --apply-live
+# Enable Flathub and install Flatpak apps
+RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Install Wine and Bottles from Flatpak
+RUN flatpak install -y flathub org.winehq.Wine
+RUN flatpak install -y flathub com.usebottles.bottles
+
+# Branding and onboarding setup
 COPY branding/ /etc/ublue-config/branding/
 COPY yafti.yml /etc/ublue-config/yafti.yml
 
