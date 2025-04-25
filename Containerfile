@@ -1,7 +1,11 @@
 # Containerfile for Shibe OS
-FROM registry.fedoraproject.org/fedora:latest
 
+FROM ghcr.io/ublue-os/kinoite:latest
+LABEL maintainer="kevcops"
 LABEL ostree.bootable=true
+
+# Custom packages, configs, branding go here
+
 
 LABEL org.opencontainers.image.title="Shibe OS"
 LABEL org.opencontainers.image.description="Custom immutable Linux distro for pediatric dental offices - Shibe OS"
