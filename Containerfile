@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/bluefin:latest
+FROM ghcr.io/ublue-os/ublue-kinoite:latest
 
 LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
@@ -31,4 +31,3 @@ RUN install -Dm644 systemd/shibe-onboarding.service /etc/systemd/system/shibe-on
 
 RUN systemctl set-default graphical.target
 RUN gtk-update-icon-cache /usr/share/icons/hicolor || true
-
