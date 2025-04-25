@@ -1,11 +1,10 @@
-# Use a bootable base from uBlue (Fedora Kinoite with ostree + kernel)
-FROM ghcr.io/ublue-os/bluefin-kinoite:latest
+FROM ghcr.io/ublue-os/aurora-kinoite:latest
 
 LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
 LABEL ostree.bootable="true"
 
-# Optional: Install extra RPMs
+# Install extra RPMs
 RUN rpm-ostree install \
     libreoffice \
     simple-scan \
@@ -24,20 +23,15 @@ RUN rpm-ostree install \
     flameshot \
     --apply-live
 
-# Copy onboarding + branding files
+# Add your branding and onboarding files
 COPY branding/ /etc/ublue-config/branding/
 COPY yafti.yml /etc/ublue-config/yafti.yml
 
-# Optional: Set a custom hostname if desired
-# RUN echo "shibeos" > /etc/hostname
-
-# Run your onboarding script on first boot
+# Enable onboarding on first boot
 RUN install -Dm644 systemd/shibe-onboarding.service /etc/systemd/system/shibe-onboarding.service && \
     touch /etc/shibe-os-firstboot && \
     systemctl enable shibe-onboarding.service
 
-# Set default target to graphical (KDE)
+# Final system tweaks
 RUN systemctl set-default graphical.target
-
-# Ensure proper permissions on icons/config
 RUN gtk-update-icon-cache /usr/share/icons/hicolor || true
