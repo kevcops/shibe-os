@@ -4,22 +4,22 @@ LABEL maintainer="Kevin Coppola <kcoppola@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/kevcops/shibe-os"
 LABEL ostree.bootable="true"
 
-RUN rpm-ostree install \
-    libreoffice \
-    simple-scan \
-    wine \
-    tailscale \
-    vlc \
-    gimp \
-    blender \
-    thunderbird \
-    xournalpp \
-    google-chrome \
-    firefox \
-    brave-browser \
-    bitwarden \
-    gnome-boxes \
-    flameshot \
+
+RUN rpm-ostree install libreoffice \
+RUN rpm-ostree install simple-scan \
+RUN rpm-ostree install wine \
+RUN rpm-ostree install tailscale \
+RUN rpm-ostree install vlc \
+RUN rpm-ostree install gimp \
+RUN rpm-ostree install blender \
+RUN rpm-ostree install thunderbird \
+RUN rpm-ostree install xournalpp \
+RUN rpm-ostree install google-chrome \
+RUN rpm-ostree install firefox \
+RUN rpm-ostree install brave-browser \
+RUN rpm-ostree install bitwarden \
+RUN rpm-ostree install gnome-boxes \
+RUN rpm-ostree install flameshot \
     --apply-live
 
 COPY branding/ /etc/ublue-config/branding/
