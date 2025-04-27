@@ -1,0 +1,35 @@
+screens:
+  - name: welcome
+    type: message
+    title: "🐕 Welcome to Shibe OS!"
+    description: "Your Dental Office Portal"
+
+  - name: officeid
+    type: text-entry
+    title: "CareStack Office ID"
+    variable: office_id
+    placeholder: "your-office-id"
+
+  - name: apps
+    type: multiselect
+    title: "Optional Applications"
+    options:
+      - name: Zoom (Video Meetings)
+        value: us.zoom.Zoom
+      - name: Slack (Communications)
+        value: com.slack.Slack
+      - name: GIMP (Image Editor)
+        value: org.gimp.GIMP
+      - name: Bitwarden (Password Manager)
+        value: com.bitwarden.desktop
+      - name: Blender (3D Creation Suite)
+        value: org.blender.Blender
+      - name: Wine (Run Windows Apps)
+        value: org.winehq.Wine
+      - name: Bottles (Manage Wine Environments)
+        value: com.usebottles.bottles
+
+  - name: finish
+    type: script
+    title: "Finalizing Shibe OS Setup..."
+    script: /etc/ublue-config/branding/shibe-onboarding.sh

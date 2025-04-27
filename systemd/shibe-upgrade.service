@@ -1,0 +1,6 @@
+[Unit]
+Description=Automatic Shibe OS Upgrade Service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bootc upgrade
