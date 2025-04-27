@@ -1,18 +1,10 @@
 🐕 Welcome to Shibe OS!
 
-You are now running Shibe OS, your secure dental office portal!
+Your secure, immutable dental office Linux system.
 
-This system is running in a *read-only, bootable container* for maximum security and stability.
+✅ Plasma Desktop  
+✅ Automatic Nightly Updates  
+✅ CareStack Portal Setup
 
-✅ You can install apps via Flatpak (example: flatpak install flathub org.mozilla.firefox)
-✅ You can layer system packages via rpm-ostree (example: rpm-ostree install libreoffice)
-✅ Your user files, downloads, and documents are fully writable and normal.
-
-System updates are managed cleanly through container upgrades.
-To update your OS, just run:
-
-  sudo bootc upgrade
-
-and reboot when prompted.
-
-For help, contact your Shibe OS administrator 🐕🦷
+Update with:
+sudo bootc upgrade
