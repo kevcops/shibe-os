@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=yafti
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Shibe OS Setup
+Comment=Start Shibe OS onboarding on first login
