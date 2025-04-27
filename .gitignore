@@ -1,0 +1,28 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore Git temp files
+FETCH_HEAD
+ORIG_HEAD
+HEAD
+
+# Ignore editor junk
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore build artifacts
+*.iso
+*.img
+*.qcow2
+
+# Ignore VSCode and editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore zip files
+*.zip
