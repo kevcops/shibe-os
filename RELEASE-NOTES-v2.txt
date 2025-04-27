@@ -1,0 +1,23 @@
+# 🚀 Shibe OS v2 Release Notes
+
+## 🐕 Major Updates
+- Removed GNOME entirely — now pure KDE Plasma experience.
+- Forced SDDM login manager for seamless Plasma login.
+- Added full Shibe OS branding (wallpaper, CareStack shortcut, MOTD).
+- Onboarding now launches automatically on first login (Yafti GUI).
+- Optional App selection at first boot (Zoom, Slack, GIMP, Blender, Wine).
+- Automatic nightly upgrades (bootc upgrade timer).
+
+## 🛠 Improvements
+- Explicit installation of Konsole terminal.
+- Flatpak preconfigured (Flathub remote added).
+- Cleaner README.md and repo structure.
+
+## 📈 Upgrade Path
+- To upgrade from v1 to v2, simply rebase to the latest container:
+```bash
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/kevcops/shibe-os:latest
+sudo systemctl reboot
+```
+
+✅ Welcome to Shibe OS v2 — professional, secure, polished for dental offices!

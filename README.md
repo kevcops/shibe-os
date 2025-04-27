@@ -1,32 +1,83 @@
 # 🐕 Shibe OS
 
-Welcome to **Shibe OS** — your secure, polished Linux for dental offices.
+Secure. Simple. Reliable.  
+The custom Linux operating system built for dental office workflows.
 
-## Features
+---
 
-- Immutable Fedora Silverblue Base
-- KDE Plasma Desktop Only (No GNOME)
-- First Boot Setup Wizard (Yafti)
-- Optional Apps (Zoom, Slack, GIMP, etc.)
-- CareStack Portal Integration
-- Automatic Nightly Updates
+## 📋 About Shibe OS
 
-## Quick Install
+**Shibe OS** is a custom Fedora Silverblue-based Linux distribution designed for:
+- Immutable, read-only security
+- First boot onboarding (CareStack Portal, optional apps)
+- Professional KDE Plasma desktop environment
+- Automatic nightly system updates
+
+Built specifically for **dental offices**, **front desk staff**, and **administrators**.
+
+---
+
+## 🚀 Quick Install
 
 ```bash
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/kevcops/shibe-os:latest
 sudo systemctl reboot
 ```
 
-## Updates
+✅ After reboot, follow the onboarding wizard.
 
-Updates are managed automatically.  
-You can manually update with:
+---
+
+## 🖥 Included Features
+
+| Feature | Status |
+|---------|--------|
+| KDE Plasma Desktop | ✅ |
+| Auto Login with SDDM | ✅ |
+| CareStack Desktop Integration | ✅ |
+| Optional Apps Install (Zoom, Slack, GIMP, etc.) | ✅ |
+| Auto System Updates (bootc nightly) | ✅ |
+| Flatpak preconfigured (Flathub) | ✅ |
+| Immutable Read-Only OS (rpm-ostree) | ✅ |
+
+---
+
+## 📈 Versioning
+
+| Version | Notes |
+|---------|-------|
+| **v1** | Initial release, GNOME + KDE offered |
+| **v2** | **(Current)** KDE only, polished onboarding, branding improvements |
+| **v3** | *(Planned)* ISO creation, Try/Install flow, more onboarding options |
+
+---
+
+## 🔧 Manual System Update
+
+You can manually trigger a system upgrade:
 
 ```bash
 sudo bootc upgrade
 ```
 
+✅ Then reboot to apply updates.
+
 ---
 
-Secure. Simple. Reliable. 🐕
+## 🛡 Technologies Used
+
+- Fedora Silverblue / rpm-ostree
+- KDE Plasma
+- Flatpak ecosystem
+- GitHub Actions for automatic container builds
+
+---
+
+## 📜 License
+
+MIT License.  
+You are free to customize, fork, and adapt Shibe OS for your office or organization!
+
+---
+
+# 🦷🐕 Shibe OS — built for dental offices, perfected for simplicity.

@@ -1,0 +1,20 @@
+name: Build Shibe OS Live ISO (Future)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  iso-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Fedora Image Builder
+        run: |
+          sudo dnf install -y lorax-lmc-novirt livemedia-creator
+
+      - name: Build Live ISO (Placeholder)
+        run: |
+          echo "This is where you would define your image blueprint."
+          echo "Then run livemedia-creator or buildah for full ISO generation."
